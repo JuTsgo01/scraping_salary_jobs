@@ -4,7 +4,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 
 # Número de páginas máximas que tem 
-pages = range(1, 66)
+pages = range(1, 86)
 
 #Função para pegar salário e local (cidade/UF)
 def extract_data(url: str) -> list[str]:
@@ -37,11 +37,11 @@ data_jobs = []
 
 #Loop para iterar sobre as páginas e pegarmos as funções em cada página
 for page in pages:
-    url = f"https://www.catho.com.br/vagas/operador-de-caixa/?page={page}&work_model%5B0%5D=presential"
+    url = f""
     jobs = extract_data(url)
     data_jobs.extend(jobs)
 
 
 #Tranformando um dataframe e salvando como excel
 df = pd.DataFrame(data_jobs, columns=['salario', 'cidade'])
-df.to_excel('catho_caixa_atendente.xlsx', index=False)
+df.to_excel('catho_operador_caixa.xlsx', index=False)
