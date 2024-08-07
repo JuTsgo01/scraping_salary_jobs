@@ -23,7 +23,7 @@ Para executar o script:
      ```
 
 2. **Execute o script Python**:
-   - Salve o código em um arquivo chamado `script.py` (ou outro nome de sua escolha).
+   - Salve o código em um arquivo chamado `salary.py` (ou outro nome de sua escolha).
    - Execute o script com o comando:
      ```bash
      python script.py
